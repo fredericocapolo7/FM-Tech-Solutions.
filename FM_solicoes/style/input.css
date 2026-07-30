@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  #nav-menu.active {
+    display: flex !important;
+  }
+
+  #hamburger span {
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+
+  #hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  #hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  #hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .card-more {
+    display: none;
+  }
+
+  .card.expanded .card-more {
+    display: block;
+  }
+
+  .card-toggle i {
+    transition: transform 0.2s ease;
+  }
+
+  .card.expanded .card-toggle i {
+    transform: rotate(180deg);
+  }
+
+  .carousel-track {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: auto;
+  }
+
+  .carousel-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carousel-track {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
